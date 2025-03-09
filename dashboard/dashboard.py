@@ -6,7 +6,7 @@ import seaborn as sns
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("air_quality.csv", parse_dates=["time"])
+    df = pd.read_csv("https://raw.githubusercontent.com/nfmuzakki/Dicoding-ADDP/refs/heads/master/dashboard/air_quality.csv", parse_dates=["time"])
     df.set_index("time", inplace=True)  # Pastikan indeks adalah datetime
     return df
 
